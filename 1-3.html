@@ -1,0 +1,139 @@
+<pre>
+
+syntax parsers: checks if grammar is correct
+	var hello = 4
+	syntax looks v a r, should be a space
+	the word after is variable name
+	etc etc
+
+lexical environments:
+	lexical definition = having to do with words
+	WHERE you write is important
+	example: scope
+
+execution contexts:
+	a WRAPPER to help manage code
+	execution context is a type of lexical environment
+
+When script is ran, a global object is created called: `this`
+
+Undefined = var created but not assigned
+Not defined = var not created
+
+Single Thread:
+one command at a time
+
+Function invocation: call stack
+
+Variable environment aka scope : where is the var? 
+
+Primitive type: a single value (not an object)
+
+Prefix notation: +(1,1)
+postfox notation: (1,1)+
+Infix operator: 1+1
+
+Associativity: order operator gets called in
+	example: 1 + 2 * 2 	returns 5
+
+Coercion: converting from one type to another (this is possible because it's js vars have dynamic types)
+	example: 1 + "2" = 12
+	example: '2' == 2 returns true
+</pre>
+
+<script>
+
+//global variables gets attached to global object
+var a = 'hello world'
+console.log(a) // hello world
+console.log(this.a) // hello world
+console.log(window.a) // hello world
+
+/* 
+Hoisting bring to the top
+creates memory for variables and functions
+*/
+b()
+console.log(varB) // this is called but it's undefined
+var varB = 'this is variable b' //now it's defined
+function b(){
+	console.log(`function b works!`)
+}
+
+
+//Function invocation: call stack
+//console log 2 then 1
+function two(){
+	console.log(2)	
+}
+function one(){
+	two()
+	console.log(1)
+}
+one()
+
+
+
+//SCOPE CHAIN
+// console logs uno because chain2 is on the same level as global
+function chain2(){
+	console.log(chainVar)
+}
+function chain1(){
+	//chainVar = 'dos'
+	var chainVar = 'dos';
+	chain2()
+}
+var chainVar = 'uno'
+chain1()
+
+
+// putting a function inside of a function is diferent!!
+// because it's in the inside the function
+function chainv1(){
+	var chainVar = 'doss';
+
+	chainv2()
+
+	function chainv2(){
+		console.log(chainVar)
+	}
+}
+var chainVar = 'unoo'
+chainv1()
+
+// Comparison operators
+console.log(false < 1) //returns true
+console.log(Number(false)) // returns 0
+/* 
+trick: false converted to num is 0
+so false < 1
+*/
+
+console.log(`object.is(1,1) is ${Object.is(1, 1)}`)
+
+console.log('boolean(1) returns' + Boolean(1)) // -1 is true
+console.log('boolean(0) returns' +Boolean(0)) // 0 is false
+console.log('boolean(-1) returns' +Boolean(-1)) // -1 is true
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
