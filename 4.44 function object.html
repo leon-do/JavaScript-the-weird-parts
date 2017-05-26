@@ -1,0 +1,24 @@
+<script>
+
+	// Immediately Invoked Function Expression (IIFE)
+	
+	//https://stackoverflow.com/questions/34589488/es6-immediately-invoked-arrow-function
+	
+	var myFunction1 = ((name) => {
+		return name
+	})('foobar1');
+	console.log(myFunction1)
+
+
+
+	var myFunction2 = function(name2) {
+		return name2
+	}('foobar2');
+	console.log(myFunction2);
+
+
+	(function(name3){
+		console.log(name3)
+	}('foobar3'))
+
+</script>

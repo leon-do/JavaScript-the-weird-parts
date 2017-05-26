@@ -1,0 +1,23 @@
+<script>
+
+
+
+	// this is a function STATEMENT. 
+	// only in memory. no value
+	// function statment is HOISTED
+	function statement(name){
+		document.write(name)
+	}
+	statement(' apple ')
+
+
+
+
+	//this is a function EXPRESSION
+	// not hoisted, must call below var
+	var expression = function(name){
+		document.write(name)
+	}
+	expression(' bananna ')
+
+</script>

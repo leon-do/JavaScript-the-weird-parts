@@ -1,0 +1,31 @@
+<script>
+
+// variables are by value
+var a = 1;
+var b = a;
+
+a = 2;
+
+//a and b are stored in 2 different spaces
+document.write(a) //2
+document.write(b) //1
+
+
+
+//////////////////////////////////////////////////////////////
+
+
+
+// object are by reference
+// shares same memory space
+var c = {name: 'bob'}
+var d = c;
+
+// MUTATE aka replaces bob with steve for both var c and d
+c.name = 'steve'
+
+document.write(JSON.stringify(c)) // steve
+document.write(JSON.stringify(d)) //steve
+
+
+</script>

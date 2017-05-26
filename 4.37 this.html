@@ -1,0 +1,24 @@
+<script>
+
+	console.log(window) // this is the global
+
+	function a(){
+		console.log(this) // this is the global
+	}
+	a()
+
+
+	var b = () => {
+		console.log(this) // this is the global
+	}
+	b()
+
+
+	var c = {
+		myKey: function(){
+			console.log(this) // this is the c
+		}
+	}
+	c.myKey()
+
+</script>
