@@ -1,0 +1,12 @@
+<script>
+
+	var person = {name: 'john'}
+
+	var logName = () => {
+		console.log(this.name);
+	}.bind(person);
+
+
+	logName()
+
+</script>

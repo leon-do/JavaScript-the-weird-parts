@@ -1,0 +1,41 @@
+<script>
+
+a(function(data){
+	console.log(data)
+})
+
+function a(cb){
+	cb('hello world')
+}
+
+
+
+
+///////////////////////////////////////////////////////////
+
+
+
+
+const asynchronousOperation1 = () => {
+	return "foo"
+}
+
+const asynchronousOperation2 = () => {
+	return "bar"
+}
+
+
+const doAsyncOp = (() => {
+	return Promise.all([
+		asynchronousOperation1(),
+		asynchronousOperation2()
+	]).then(function(vals) {
+		compareVal(vals)
+	})
+})();
+
+const compareVal = (data) => {
+	console.log(data) // [foo, bar]
+}
+
+</script>

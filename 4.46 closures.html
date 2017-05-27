@@ -1,5 +1,14 @@
 <script>
 	
-	
-	
+	//closures
+	function firstFunction(){
+
+		return function secondFunction(name){
+			console.log(name)
+		}
+
+	}
+
+	firstFunction()('bob')
+
 </script>
