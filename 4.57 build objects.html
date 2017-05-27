@@ -1,0 +1,21 @@
+<script>
+	
+	//function constructors and keyword new
+	// a class is not an object but defines an object
+
+	function Person(special){
+		console.log(this) // {}
+
+		this.firstName = 'jon',
+		this.lastName = 'doe',
+		this.power = special
+	}
+
+
+	var superman = new Person('fly')
+	var spiderman = new Person('crawl')
+
+	console.log(superman)
+	console.log(spiderman)
+
+</script>

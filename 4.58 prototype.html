@@ -1,0 +1,32 @@
+<script>
+	
+
+	// RULE: PUT ALL FUNCTIONS INSIDE OF PROTOTYPE
+	// because they can all poin to the same block of memory
+
+
+	// this is a constructor specific for human1
+	function Person(name){
+		this.name = name
+	}
+
+
+	// every function get a prototype that's empty {}
+	// the protoype will apply to all humans
+	Person.prototype.getName = function() {
+		return this.name + '!!!!'
+	}
+
+
+
+	//create an human1
+	var human1 = new Person('joe')
+	console.log(human1)
+	console.log(human1.getName())
+
+	//
+	var human2 = new Person('sara')
+	console.log(human2)
+	console.log(human2.getName())
+
+</script>

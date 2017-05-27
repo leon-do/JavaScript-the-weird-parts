@@ -1,0 +1,27 @@
+<script>
+	
+	// generic car/constructor
+	class Car {
+		constructor(name){
+			this.model = name
+		}
+	}
+
+
+	// specific type of car (racecar)
+	class Racecar extends Car {
+		constructor(name){
+			super(name)
+			this.speed = 'fast'
+		}
+	} 
+
+
+	var honda = new Car('civic')
+	console.log(honda)
+
+
+	var tesla = new Racecar('model X')
+	console.log(tesla)
+	
+</script>
