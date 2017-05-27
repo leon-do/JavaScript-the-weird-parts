@@ -1,0 +1,27 @@
+<script>
+	
+	class Person {
+		//unique constructor
+		constructor(name){
+			this.firstName = name
+		}
+
+		// prototype
+		greet(){
+			return this.firstName + '!!!!'
+		}
+	}
+
+
+	var jon = new Person('jon')
+	console.log(jon)
+	console.log(jon.greet()) // jon!!!!
+
+
+	var sara = new Person('sara')
+	console.log(sara)
+	console.log(sara.greet()) // sarah!!!!
+
+</script>
+
+
